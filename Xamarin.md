@@ -88,6 +88,16 @@ Fill out the forms and make sure `Android` and `iOS` are checked. `Use Portable 
 
 Now the app should already be runnable. Try to run the `.Droid` and the `.iOS` projects with any device / emulator / simulator.
 
+## Packages
+
+Apps usually use additional `NuGet` packages, but the `packages` folder often is excluded from repository by `.gitignore`.
+
+So when checking out a Xamarin project first install these missing packages. Normally this happens automatically when opening the solution.
+
+If this doesn't happen automatically right-click on the solution in the left solution panel and then `Restore NuGet Packages`.
+
+For this to work the `packages.config` files have to be located in the projects root paths so don't move them somewhere else.
+
 ## OS Version
 
 ### iOS

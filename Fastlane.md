@@ -25,7 +25,7 @@ Check the current Xcode version:
 
 Install fastlane via homebrew:
 
-	brew cast install fastlane
+	brew cask install fastlane
 
 Check fastlane version:
 
@@ -70,9 +70,9 @@ Install additional plugins (e.g. "appicon" [https://github.com/KrauseFx/fastlane
 
 	fastlane add_plugin appicon
 
-## usage
+## Usage
 
-Got to the project folder with the Gemfile and run the following to initiate fastlane:
+Go to the project folder with the Gemfile and run the following to initiate fastlane:
 
 	bundle exec fastlane init
 
