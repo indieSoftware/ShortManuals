@@ -1,16 +1,12 @@
 ## Install git
 
-Install brew if not yet done:
-
-	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-	
 Install git via brew:
 
 	brew install git
 	
-Create gitconfig:
+Createn `~/.gitconfig`:
 
-	~/.gitconfig
+	touch ~/.gitconfig
 	
 Add content with the follwing example:
 
@@ -86,6 +82,18 @@ Check if they are loaded:
 
 Each ssh key should get listed.
 
+To remove one particular key:
+
+	ssh-add -d file
+
+Or to remove all keys:
+
+	ssh-add -D
+
+To add all again:
+
+	ssh-add -A
+
 ## Load ssh keys when the user logs in
 
 Create a launchd daemon which starts a shell script, by creating a new file at 
@@ -123,3 +131,20 @@ With the content:
 	# load ssh keys for git & co
 	ssh-add -A 2>/dev/null;
 
+## Use Microsoft Git Credential Manager for Visual Studio Team Services
+
+[https://github.com/Microsoft/Git-Credential-Manager-for-Mac-and-Linux](https://github.com/Microsoft/Git-Credential-Manager-for-Mac-and-Linux)
+
+Install via Homebrew (modifies the global Git configuration file `.gitconfig` in the home folder for a `credential` section):
+
+	brew install git-credential-manager
+	git-credential-manager install
+
+Now the git credential manager should be ready and will automatically be used when using git commands:
+
+	git clone urlToRepo
+
+When an error occured while using the git credential manager it might happen because the manager needs Java 1.8. For this to fix modify the `.gitconfig` in the home folder and change the path to the java virtual machine pointing to version 1.8 (needs to be installed):
+
+	[credential]
+	helper = !/Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/bin/java -Ddebug=false -Djava.net.useSystemProxies=true -jar /usr/local/Cellar/git-credential-manager/2.0.3/libexec/git-credential-manager-2.0.3.jar

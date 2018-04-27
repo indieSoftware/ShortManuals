@@ -68,8 +68,11 @@ target 'MyTargetName' do
 	development_pods
 end
 
-target 'MyTargetNameTests' do
-	common_pods
+target 'MyTargetNameUnitTests' do
+	test_pods
+end
+
+target 'MyTargetNameUITests' do
 	test_pods
 end
 

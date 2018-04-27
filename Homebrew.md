@@ -2,6 +2,10 @@
 
 Brew website: [https://docs.brew.sh/FAQ.html](https://docs.brew.sh/FAQ.html)
 
+Install Homebrew:
+
+	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
 Update formulae and Homebrew itself:
 
 	brew update
@@ -9,6 +13,14 @@ Update formulae and Homebrew itself:
 Install something like cocoapods:
 
 	brew install cocoapods
+
+Deinstall something:
+
+	brew remove cocoapods
+
+Check for outdated:
+
+	brew outdated
 
 Upgrade everything:
 
@@ -52,7 +64,7 @@ Install software via cask:
 
 Uninstall software:
 
-	brew cask uninstall google-chrome
+	brew cask uninstall fastlane
 
 List all via cask installed software:
 
