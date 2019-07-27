@@ -6,6 +6,10 @@ Install Homebrew:
 
 	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+Check that brew is working correctly:
+
+	brew doctor
+
 Update formulae and Homebrew itself:
 
 	brew update
@@ -14,7 +18,7 @@ Install something like cocoapods:
 
 	brew install cocoapods
 
-Deinstall something:
+Deinstall something (like cocoapods, because use RVM for ruby environments and gem managemen instead):
 
 	brew remove cocoapods
 
@@ -108,6 +112,10 @@ Register JDKs (look in the `/Library/Java/JavaVirtualMachines` folder to find th
 	jenv add /Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/
 	jenv add /Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home/
 	
+To remove registered versions:
+
+	jenv remove /Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home/
+
 List all registered JDKs (the one with the asterisk is the active one):
 
 	jenv versions
@@ -122,6 +130,10 @@ Result may look similar to:
 	oracle64-1.8.0.162
 	oracle64-9.0.4
 
+They are symlinks in the folder:
+
+	~/.jenv/versions
+
 Change the global java version to 9:
 
 	jenv global 9.0
@@ -129,4 +141,8 @@ Change the global java version to 9:
 Change the local java version which means all projects in this folder will use the provided version instead of the global one. Creates a `.java-version` file in the folder.
 
 	jenv local 1.8
+
+Check for Java version:
+
+	java -version
 

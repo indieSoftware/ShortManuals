@@ -8,7 +8,9 @@ Website: [https://cocoapods.org/](https://cocoapods.org/)
 
 ## Install
 
-Install cocapods via homebrew:
+Best use RVM to install ruby versions and gemsets: [https://rvm.io](https://rvm.io)
+
+Second choice, install cocapods via homebrew:
 
 	brew install cocoapods
 
