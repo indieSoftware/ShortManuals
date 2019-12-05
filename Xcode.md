@@ -27,3 +27,29 @@ Accroding to [https://stackoverflow.com/questions/29930198/can-i-delete-data-fro
 	~/Library/Developer/Xcode/iOS DeviceSupport
 	~/Library/Developer/Xcode/DerivedData
 	~/Library/Developer/Xcode/Archives
+
+Alternatively use a tool like [DevCleaner](https://github.com/vashpan/xcode-dev-cleaner) which is also available on the Mac Store.
+
+# Tools
+Some interesting developer tools:
+
+## Pusher
+
+To test push notifications.
+
+[https://github.com/noodlewerk/NWPusher](https://github.com/noodlewerk/NWPusher)
+
+Install:
+
+	brew cask install pusher
+
+## ProvisionQL
+
+Quickly look and manage provisioning profile files.
+
+[https://github.com/ealeksandrov/ProvisionQL](https://github.com/ealeksandrov/ProvisionQL)
+
+Install:
+
+	brew cask install provisionql
+

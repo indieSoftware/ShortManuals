@@ -90,7 +90,7 @@ Add older version to brew:
 
 Find older versions of java:
 
-	brew cask search java
+	brew search java
 	
 Install older version of java:
 
@@ -107,14 +107,14 @@ Add to `~/.bash_profile`:
 	export PATH="$HOME/.jenv/bin:$PATH"
 	eval "$(jenv init -)"
 
-Register JDKs (look in the `/Library/Java/JavaVirtualMachines` folder to find the available versions):
+Register JDKs (look in the `/Library/Java/JavaVirtualMachines` folder to find the available versions or run `/usr/libexec/java_home -V`):
 
 	jenv add /Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/
 	jenv add /Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home/
 	
 To remove registered versions:
 
-	jenv remove /Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home/
+	jenv remove jdk-9.0.4.jdk
 
 List all registered JDKs (the one with the asterisk is the active one):
 
@@ -146,3 +146,10 @@ Check for Java version:
 
 	java -version
 
+When having an error like 
+```jenv: version `oracle64-1.7.0.45' is not installed```
+but the version is not installed, then one is locally pinned somewhere. Try finding it via
+
+	jenv version
+
+(no `s` at the end)

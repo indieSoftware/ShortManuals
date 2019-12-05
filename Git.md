@@ -4,7 +4,7 @@ Install git via brew:
 
 	brew install git
 	
-Createn `~/.gitconfig`:
+Create then `~/.gitconfig`:
 
 	touch ~/.gitconfig
 	
