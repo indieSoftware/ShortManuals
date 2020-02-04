@@ -40,6 +40,16 @@ Install a ruby version:
 See which ruby versions are installed:
 
 	rvm list rubies
+	
+Set default ruby:
+
+	rvm alias create default ruby-2.6.3
+
+Make sure the RVM Ruby is used, not the OSX one:
+
+	which ruby
+
+Should return something like `/Users/skorset/.rvm/rubies/ruby-2.6.3/bin/ruby` and not `/usr/bin/ruby`. If the latter is the case keep in mind that with MacOS Catalina the zsh is used rather than the bash, therefore, the `~/.zshrc` needs to be configured instead of the `.bash_profile`.
 
 ## Gems
 
