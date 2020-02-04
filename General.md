@@ -12,7 +12,7 @@ Now all hidden files should be visble, look for the otherwise hidden `Library` f
 
 To hide the file again, press again `cmd` + `shift` + `.` on the root folder in Finder.
 
-Alternatively to make hidden files visible permanently use the console by executing:
+However, this shortcut doesn't persist. To make hidden files visible permanently use the console by executing:
 
 	defaults write com.apple.finder AppleShowAllFiles YES
 

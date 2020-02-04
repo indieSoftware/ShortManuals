@@ -86,7 +86,7 @@ Update all outdated casks:
 
 Add older version to brew:
 
-	brew tap caskroom/versions
+	brew tap homebrew/cask-versions
 
 Find older versions of java:
 
