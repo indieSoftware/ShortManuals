@@ -4,7 +4,7 @@ Brew website: [https://docs.brew.sh/FAQ.html](https://docs.brew.sh/FAQ.html)
 
 Install Homebrew:
 
-	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 Check that brew is working correctly:
 
@@ -102,7 +102,7 @@ Use `jenv` [http://www.jenv.be](http://www.jenv.be) to manage multiple java vers
 
 	brew install jenv
 
-Add to `~/.bash_profile`:
+Add to `~/.bash_profile` (or to `~/.zshrc` when using zsh):
 
 	export PATH="$HOME/.jenv/bin:$PATH"
 	eval "$(jenv init -)"

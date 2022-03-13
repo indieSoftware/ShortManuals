@@ -52,7 +52,9 @@ To create a new ssh key:
 
 Add each ssh key to the chain and add password:
 
-	ssh-add -K ~/.ssh/SvenKorset-GitHub
+	ssh-add --apple-use-keychain ~/.ssh/SvenKorset-GitHub
+
+Formerly: `ssh-add -K ~/.ssh/SvenKorset-GitHub`
 	
 Add a config:
 
@@ -92,7 +94,9 @@ Or to remove all keys:
 
 To add all again:
 
-	ssh-add -A
+	ssh-add --apple-load-keychain
+
+Formerly: `ssh-add -A`
 
 ## Load ssh keys when the user logs in
 
@@ -129,7 +133,7 @@ With the content:
 	#!/bin/sh
 
 	# load ssh keys for git & co
-	ssh-add -A 2>/dev/null;
+	ssh-add --apple-load-keychain 2>/dev/null;
 
 ## Use Microsoft Git Credential Manager for Visual Studio Team Services
 

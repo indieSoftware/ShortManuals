@@ -25,7 +25,7 @@ Check the current Xcode version:
 
 Install fastlane via homebrew:
 
-	brew cask install fastlane
+	brew install fastlane
 
 Add to `~/.bash_profile`:
 

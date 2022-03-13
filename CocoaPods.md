@@ -106,3 +106,19 @@ When new versions of pods are released update the local version with:
 
 	pod update	
 
+## Release
+
+[https://guides.cocoapods.org/making/getting-setup-with-trunk.html](https://guides.cocoapods.org/making/getting-setup-with-trunk.html)
+
+When an error while releasing appears, similar to `Authentication token is invalid or unverified. Either verify it with the email that was sent or register a new session.` then register the session:
+
+	pod trunk register yourEmail@example.com 'Your Name' --description='macbook air'
+
+To list all sessions:
+
+	pod trunk me
+
+To release a pod:
+
+	pod trunk push MyLib.podspec
+
